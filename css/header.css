@@ -1,0 +1,159 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #4A148C; /* Dark Purple */
+    color: white;
+    padding: 20px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.logo img {
+    width: 150px;
+}
+
+nav {
+    flex: 1;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: #8E24AA; /* Light Purple */
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+    width: 100%;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-left: auto;}
+
+.cart-container {
+    position: relative;
+    margin-right: 55px;
+}
+
+.cart-icon {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    font-size: 24px;
+}
+
+.cart-icon .cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #8E24AA; /* Light Purple */
+    color: white;
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 12px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.profile-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.profile-dropdown {
+    position: relative;
+}
+
+.profile-dropdown span {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.profile-dropdown span .arrow {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.profile-dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 200%;
+    right: 0;
+    background-color: #6A1B9A; /* Medium Purple */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.profile-dropdown .dropdown-content a {
+    color: white;
+    padding: 15px 40px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+    min-width: 150px;
+}
+
+.profile-dropdown .dropdown-content a:hover {
+    background-color: #9575CD; 
+    color: #311B92;
+}
+
+.profile-dropdown.show .dropdown-content {
+    display: block;
+}
+
+.profile-dropdown.show .arrow {
+    transform: rotate(180deg);
+}

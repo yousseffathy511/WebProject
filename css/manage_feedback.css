@@ -1,0 +1,37 @@
+.feedback-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+.feedback-list li {
+    background: #fff;
+    color: #4A148C;
+    margin: 10px 0;
+    padding: 20px;
+    border: 1px solid #4A148C;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center; /* Center the text */
+}
+
+.feedback-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(74, 20, 140, 0.5); 
+}
+
+.feedback-list li p {
+    margin: 5px 0;
+}
+
+.feedback-list li .feedback-text {
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    color: #4A148C;
+}
+
+.feedback-list li .feedback-user {
+    font-weight: bold;
+    color: black;
+}

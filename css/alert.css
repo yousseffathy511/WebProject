@@ -1,0 +1,74 @@
+/* Alert Styles */
+.alert {
+    font-family: sans-serif;
+    color: white;
+    width: 78px;
+    z-index: 1020;
+    top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    position: fixed;
+    overflow: hidden;
+    box-shadow: 0 4px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    height: 78px;
+    background-color: gray;
+    transform: scale(0);
+    transition: all .5s;
+}
+
+.alert.alert__active {
+    opacity: 1;
+    top: 20px;
+    transform: scale(1);
+}
+
+.alert.alert__extended {
+    width: 800px;
+}
+
+.alert.alert__extended .alert--content {
+    opacity: 1;
+    transition: all .5s;
+}
+
+.alert.alert__extended .alert--words {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    margin: auto 0;
+    text-align: center;
+}
+
+.alert.error {
+    background-color: #D64646;
+}
+
+.alert.success {
+    background-color: #3CB971;
+}
+
+.alert .alert--content {
+    padding: 10px;
+    opacity: 0;
+}
+
+.alert .alert--words {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0 18px;
+    max-width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    height: 30px;
+    transition: all .3s;
+    transition-delay: .5s;
+    text-align: center;
+    
+}
